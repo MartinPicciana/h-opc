@@ -529,7 +529,7 @@ namespace Hylasoft.Opc.Ua
         ConfigSectionName = _options.ConfigSectionName,
         ApplicationConfiguration = new ApplicationConfiguration
         {
-            ApplicationUri = this.Options.ApplicationUri.AbsoluteUri, 
+          ApplicationUri = this.Options.ApplicationUri.AbsoluteUri,
           ApplicationName = _options.ApplicationName,
           ApplicationType = ApplicationType.Client,
           CertificateValidator = certificateValidator,

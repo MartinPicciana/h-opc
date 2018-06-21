@@ -113,7 +113,7 @@ namespace Hylasoft.Opc.Ua
         {
             // Initialize default values:
             ApplicationName = "h-opc-client";
-            this.ApplicationUri = new Uri($"urn:{this.ApplicationName}"); // Default URI
+            this.ApplicationUri = new Uri("urn:" + this.ApplicationName); // Default URI
             AutoAcceptUntrustedCertificates = true;
             ConfigSectionName = "h-opc-client";
             DefaultMonitorInterval = 100;
