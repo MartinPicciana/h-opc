@@ -602,7 +602,7 @@ namespace Hylasoft.Opc.Ua
       try
       {
         var subNodes = ExploreFolder(node.Tag);
-        found = subNodes.Single(n => n.Name == head);
+        found = subNodes.Single(n => n.Name.Equals(tag) || n.Name == head);
       }
       catch (Exception ex)
       {
@@ -613,7 +613,7 @@ namespace Hylasoft.Opc.Ua
       var folderList = folders.ToList();
       folderList.RemoveAt(0); // remove the first node
       folders = folderList.ToArray();
-      return folders.Length == 0
+      return found.Name.Equals(tag)
         ? found // last node, return it
         : FindNode(string.Join(".", folders), found); // find sub nodes
     }
